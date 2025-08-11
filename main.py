@@ -1,5 +1,5 @@
 import copy
-
+import os
 from aiogram import Bot, Dispatcher
 from aiogram.exceptions import TelegramBadRequest
 from aiogram.filters import CommandStart
@@ -12,7 +12,7 @@ from aiogram.types import (
 )
 
 # Создаем объекты бота и диспетчера
-bot = Bot(token="8425253015:AAGMeaIGbfGPskHvhgbmK7SB_WFKv7apMbA")
+bot = Bot(token=os.getenv("BOT_TOKEN"))
 dp = Dispatcher()
 
 # Инициализируем константу размера игрового поля
